@@ -8,17 +8,17 @@ To accurately regress and predict the median_house_value for different districts
 ### 2. Dataset: 
 Utilizes the California Housing dataset, including features such as:
 
-       median_income
+ 1. median_income
 
-        housing_median_age
-        
-        total_rooms / total_bedrooms
-        
-        population / households
-        
-        ocean_proximity
-        
-        Location (latitude, longitude)
+ 2. housing_median_age
+ 
+ 3. total_rooms / total_bedrooms
+ 
+ 4. population / households
+ 
+ 5. ocean_proximity
+ 
+ 6. Location (latitude, longitude)
 
 ### 3. Tech Stack: 
 The project is notable for its use of RAPIDS libraries (cuDF, cuML) alongside scikit-learn to leverage GPU acceleration for faster data processing and model training.
