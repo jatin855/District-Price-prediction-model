@@ -33,3 +33,15 @@ Handles train/test splitting using unique identifier hashing to ensure consisten
 
 #### Modeling: 
 Implements regression algorithms to minimize Root Mean Squared Error (RMSE) and save the final optimized model (Prototype_district_prices_predictor.joblib).
+## 🤝 Contributing
+Contributions are welcome! If you have suggestions for improving the model accuracy or adding new features:
+
+1. Fork the repository.
+
+2. Create a new branch (git checkout -b feature/NewFeature).
+
+3. Commit your changes (git commit -m 'Add some NewFeature').
+
+4. Push to the branch (git push origin feature/NewFeature).
+
+5. Open a Pull Request.
