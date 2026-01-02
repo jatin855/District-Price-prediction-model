@@ -2,28 +2,29 @@
 This project is a machine learning initiative designed to predict median house values at the district level. It analyzes various demographic and geographic features to estimate housing prices, serving as a prototype for real estate price regression.
 
 ## Project Overview
-    Goal: To accurately regress and predict the median_house_value for different districts based on census data.
+### 1. Goal: To accurately regress and predict the median_house_value for different districts based on census data.
 
-Dataset: Utilizes the California Housing dataset, including features such as:
+### 2. Dataset: Utilizes the California Housing dataset, including features such as:
 
-median_income
+       median_income
 
-housing_median_age
+        housing_median_age
+        
+        total_rooms / total_bedrooms
+        
+        population / households
+        
+        ocean_proximity
+        
+        Location (latitude, longitude)
 
-total_rooms / total_bedrooms
+### 3. Tech Stack: 
+The project is notable for its use of RAPIDS libraries (cuDF, cuML) alongside scikit-learn to leverage GPU acceleration for faster data processing and model training.
 
-population / households
+### Key Components:
 
-ocean_proximity
+#### Data Analysis: Includes histograms and statistical summaries to understand data distributions (e.g., income, housing age).
 
-Location (latitude, longitude)
+#### Preprocessing: Handles train/test splitting using unique identifier hashing to ensure consistent data separation.
 
-Tech Stack: The project is notable for its use of RAPIDS libraries (cuDF, cuML) alongside scikit-learn to leverage GPU acceleration for faster data processing and model training.
-
-Key Components:
-
-Data Analysis: Includes histograms and statistical summaries to understand data distributions (e.g., income, housing age).
-
-Preprocessing: Handles train/test splitting using unique identifier hashing to ensure consistent data separation.
-
-Modeling: Implements regression algorithms to minimize Root Mean Squared Error (RMSE) and save the final optimized model (Prototype_district_prices_predictor.joblib).
+#### Modeling: Implements regression algorithms to minimize Root Mean Squared Error (RMSE) and save the final optimized model (Prototype_district_prices_predictor.joblib).
