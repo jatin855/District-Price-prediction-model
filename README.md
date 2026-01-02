@@ -1,84 +1,29 @@
-# District-Price-prediction-model
-A machine learning project designed to predict prices based on district-level data. This repository contains the dataset, exploratory data analysis graphs, model prototypes, and the final training script used to generate the predictions.
+# District Price Prediction Model
+This project is a machine learning initiative designed to predict median house values at the district level. It analyzes various demographic and geographic features to estimate housing prices, serving as a prototype for real estate price regression.
 
-📂 Repository Structure
-The project is organized into the following directories:
+## Project Overview
+    Goal: To accurately regress and predict the median_house_value for different districts based on census data.
 
-data/: Contains the raw and processed datasets used for training and testing the model.
+Dataset: Utilizes the California Housing dataset, including features such as:
 
-graphs/: Stores generated visualizations and plots (e.g., data distribution, correlation heatmaps, prediction vs. actual charts) created during the analysis.
+median_income
 
-models and prototypes/: Contains experimental notebooks, different model iterations, and potentially saved model files (e.g., .pkl or .joblib) from early prototyping.
+housing_median_age
 
-training script/: Holds the main Jupyter Notebook(s) or Python scripts used for the final model training and evaluation pipeline.
+total_rooms / total_bedrooms
 
-🚀 Getting Started
-Follow these instructions to set up the project on your local machine.
+population / households
 
-Prerequisites
-You will need Python 3.x and the following libraries. It is recommended to use a virtual environment or Anaconda.
+ocean_proximity
 
-Jupyter Notebook
+Location (latitude, longitude)
 
-Pandas
+Tech Stack: The project is notable for its use of RAPIDS libraries (cuDF, cuML) alongside scikit-learn to leverage GPU acceleration for faster data processing and model training.
 
-NumPy
+Key Components:
 
-Scikit-Learn
+Data Analysis: Includes histograms and statistical summaries to understand data distributions (e.g., income, housing age).
 
-Matplotlib / Seaborn
+Preprocessing: Handles train/test splitting using unique identifier hashing to ensure consistent data separation.
 
-Installation
-Clone the repository:
-
-Bash
-
-git clone https://github.com/jatin855/District-Price-prediction-model.git
-cd District-Price-prediction-model
-Install dependencies: If a requirements.txt file is not present, you can install the standard ML stack manually:
-
-Bash
-
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
-📊 Usage
-Navigate to the training directory:
-
-Bash
-
-cd "training script"
-Launch Jupyter Notebook:
-
-Bash
-
-jupyter notebook
-Run the Model: Open the notebook file present in the directory. Run the cells sequentially to:
-
-Load the data from the data/ folder.
-
-Preprocess the features (encoding districts, handling missing values).
-
-Train the machine learning model (e.g., Linear Regression, Random Forest).
-
-View the evaluation metrics and prediction results.
-
-📈 Visualizations
-Check the graphs/ folder to see visual insights generated from the data, such as:
-
-Price trends across different districts.
-
-Feature importance charts.
-
-Model performance graphs (Residuals, Accuracy).
-
-🤝 Contributing
-Contributions are welcome! If you have suggestions for improving the model accuracy or adding new features:
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature/NewFeature).
-
-Commit your changes (git commit -m 'Add some NewFeature').
-
-Push to the branch (git push origin feature/NewFeature).
-
-Open a Pull Request.
+Modeling: Implements regression algorithms to minimize Root Mean Squared Error (RMSE) and save the final optimized model (Prototype_district_prices_predictor.joblib).
